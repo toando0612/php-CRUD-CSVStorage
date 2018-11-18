@@ -7,6 +7,7 @@ session_start();
 <html>
     <head>
         <title>Education System</title>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -43,7 +44,7 @@ session_start();
                 unset($_SESSION['message']['text']);
             }
 
-            define('DEFAULT_PAGE','list_lecturers');
+            define('DEFAULT_PAGE','about');
 
 
             if(isset($_GET['url'])) {

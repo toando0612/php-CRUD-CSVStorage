@@ -1,5 +1,5 @@
-<div class="jumbotron text-center  -bottom" class=" text-center" style="margin-bottom:0;">
-    <p class="txt-railway">Copyright &copy; <?php echo date('Y') ?></p>
+<div class="jumbotron text-center" class=" text-center" style="margin-bottom:0; margin-top: 900px">
+    <p class="txt-railway">Copyright &copy; Toan Do<?php echo date('Y') ?></p>
     <br />
     <a href="https://www.facebook.com/toan.do.0612"><i class="fa fa-facebook fa-3x social" style="margin: 10px"></i></a>
     <a href="https://twitter.com/doquoctoan0612"><i class="fa fa-twitter fa-3x social" style="margin: 10px"></i></a>

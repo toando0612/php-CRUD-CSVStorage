@@ -1,17 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="./?url=list_lecturers">
-            <img src="style/icons/home.png" width="30" height="30" class="" alt="" >
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./?url=about">
+            <img src="style/icons/RMIT_Logo_mono.png" width="30" height="30" style="margin-top: 6px" alt="" >
         </a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Login<span class="glyphicon glyphicon-user" style="font-size:15px"></span></a>
+                <a class="nav-link" href="./?url=about"><span class="glyphicon glyphicon-user" style="font-size:15px"></span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="./?url=form_lecturers">Add<span class="glyphicon glyphicon-check" style="font-size:12px"></span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
+                <a class="nav-link" href="./?url=list_lecturers">List<span class="glyphicon glyphicon-list" style="font-size:12px"></span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="./?url=list_bq_lecturers">Bigquery<span class="glyphicon glyphicon-list" style="font-size:12px"></span></a>
             </li>
 <!--            <li class="nav-item dropdown">-->

@@ -32,7 +32,7 @@
             // 	(3) Close the file
             fclose($f);
             $_SESSION['message'] = array(
-                'text' => 'Lecturer has been added.',
+                'text' => 'Lecturer has been added ! ❤️',
                 'type' => 'success'
             );
             //Redirect to home
@@ -57,7 +57,7 @@
             fclose($f);
             $_POST['e'] = 0;
             $_SESSION['message'] = array(
-            'text' => 'Edit successfully !',
+            'text' => 'Edit successfully ! 💚',
             'type' => 'success');
             //Redirect to home
             header('Location:../?url=list_lecturers');

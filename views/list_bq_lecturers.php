@@ -2,9 +2,9 @@
 session_start();
 require_once 'php/google-api-php-client/vendor/autoload.php';
 ?>
-<div class="row justify-content-center">
+<div class="justify-content-center">
     <table class="table">
-        <thead>
+        <thead class="thead-light">
         <tr>
             <th>Firstname</th>
             <th>Lastname</th>

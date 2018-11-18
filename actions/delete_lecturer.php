@@ -12,7 +12,7 @@ fwrite($f,$data_string);
 fclose($f);
 
 $_SESSION['message'] =  array(
-    'text' => 'You will never see this info again!! <3',
+    'text' => 'You will never see this info again ! 🖤',
     'type' => 'danger'
 );
 
