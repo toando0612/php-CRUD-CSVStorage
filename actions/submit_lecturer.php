@@ -1,37 +1,19 @@
 <?php session_start();
-
-//    $mysqli = new mysqli('localhost', 'root', 'root', 'crud') or die(mysqli_error($mysqli));
-//    if (isset($_POST['save']))
-//    {
-//        $first = $_POST['first'];
-//        $last = $_POST['last'];
-//        $gender = $_POST['gender'];
-//        $age = $_POST['age'];
-//        $mysqli->query("INSERT INTO list(first,last,gender,age) VALUES('$first','$last','$gender',$age)") or
-//        die($mysqli->error);
-//    }
         if (        $_POST['first'] != '' &&
                     $_POST['last'] != '' &&
                     $_POST['gender'] != '' &&
                     $_POST['age'] != 0 &&
                     $_POST['e'] == 0
             ){
+            $lines = file('gs://s3652979-a1-storage/lecturers.csv', FILE_IGNORE_NEW_LINES); //split csv file into array
+            $count = count($lines); //calculate length of array
+            $lines[$count] = "{$_POST['first']},{$_POST['last']},{$_POST['gender']},{$_POST['age']}";   //add info into array at external position
+            $data_string = implode("\n",$lines);            // translate array into string necked with "\n"
+            $f = fopen('gs://s3652979-a1-storage/lecturers.csv','w');       //open file to write
+            fwrite($f,$data_string);    //rewrite
+            fclose($f);             //close
 
-            $f = fopen('gs://s3652979-a1-storage/lecturers.csv','w');
-            // 	(2) Write the new line info to the file
-            $lines = file('gs://s3652979-a1-storage/lecturers.csv', FILE_IGNORE_NEW_LINES);
-            $count = count($lines);
-            $lines[$count] = "{$_POST['first']},{$_POST['last']},{$_POST['gender']},{$_POST['age']}";
-            $data_string = implode("\n",$lines);
-            $f = fopen('gs://s3652979-a1-storage/lecturers.csv','w');
-            fwrite($f,$data_string);
-            fclose($f);
-
-//            fseek($f, -2, SEEK_END);
-//            fwrite($f,"{$_POST['first']},{$_POST['last']},{$_POST['gender']},{$_POST['age']}\n");
-            // 	(3) Close the file
-            fclose($f);
-            $_SESSION['message'] = array(
+            $_SESSION['message'] = array(                   //update session
                 'text' => 'Lecturer has been added ! ❤️',
                 'type' => 'success'
             );
